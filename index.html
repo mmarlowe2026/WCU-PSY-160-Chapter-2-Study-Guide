@@ -1,0 +1,2103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 2: Biology and Behavior</title>
+
+<style>
+:root{
+  --ink:#20344a;
+  --primary:#365d91;
+  --light:#eaf0f8;
+  --border:#ced8e5;
+  --background:#f4f6fa;
+  --warning:#fff4df;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{
+  margin:0;
+  color:var(--ink);
+  background:var(--background);
+  font:17px/1.65 Arial,Helvetica,sans-serif;
+}
+header{
+  background:#203b60;
+  color:white;
+  padding:45px 24px;
+}
+header>div{max-width:1100px;margin:auto}
+header p{max-width:780px;color:#e2eafa}
+h1{font-size:clamp(32px,5vw,48px);line-height:1.15;margin:12px 0}
+h2{font-size:26px;line-height:1.3;margin-top:0}
+h3{font-size:20px;margin-top:25px}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:13px}
+.layout{
+  max-width:1220px;
+  margin:30px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:235px minmax(0,1fr);
+  gap:28px;
+}
+aside{
+  position:sticky;
+  top:20px;
+  align-self:start;
+  max-height:92vh;
+  overflow:auto;
+}
+nav a{
+  display:block;
+  padding:7px 10px;
+  color:var(--primary);
+  text-decoration:none;
+  border-radius:6px;
+  font-size:14px;
+}
+nav a:hover{background:var(--light)}
+main{min-width:0}
+section{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:28px;
+  margin-bottom:24px;
+}
+a{color:var(--primary)}
+.callout{
+  background:var(--light);
+  border-left:5px solid var(--primary);
+  padding:16px 20px;
+  border-radius:6px;
+  margin:20px 0;
+}
+.warning{background:var(--warning);border-color:#a67620}
+.table-wrap{overflow-x:auto}
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:15px;
+  margin:18px 0;
+}
+th,td{
+  border-bottom:1px solid var(--border);
+  text-align:left;
+  vertical-align:top;
+  padding:12px;
+}
+th{background:var(--light)}
+tr:nth-child(even){background:#f7f9fc}
+button,select{
+  font:inherit;
+  padding:10px 15px;
+  border:1px solid #92a8c5;
+  border-radius:8px;
+  color:var(--ink);
+  background:white;
+}
+button{cursor:pointer}
+button.primary{background:var(--primary);color:white}
+button:hover{filter:brightness(.95)}
+button:disabled{opacity:.5;cursor:default}
+.tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.small{font-size:14px;color:#53667d}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+details{
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:14px;
+  margin:12px 0;
+}
+summary{font-weight:bold;cursor:pointer}
+fieldset{
+  margin:24px 0;
+  padding:18px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  min-width:0;
+}
+legend{font-weight:bold;max-width:100%;padding:0 7px}
+.option{
+  display:flex;
+  align-items:baseline;
+  gap:12px;
+  background:#f1f5fa;
+  padding:10px;
+  margin:7px 0;
+  border-radius:7px;
+  cursor:pointer;
+}
+.option input{flex:none}
+.correct-choice{outline:2px solid #237354}
+.incorrect-choice{outline:2px solid #aa402a}
+.feedback{
+  background:#e9f5ee;
+  border-left:4px solid #237354;
+  padding:12px;
+  margin-top:15px;
+}
+.feedback.incorrect{background:#fff0e8;border-color:#aa402a}
+.results{
+  background:var(--light);
+  padding:20px;
+  border-radius:10px;
+  margin:20px 0;
+}
+.topic-score{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  padding:7px 0;
+  border-bottom:1px solid var(--border);
+}
+footer{text-align:center;padding:20px;font-size:14px}
+:focus-visible{outline:3px solid #b96a21;outline-offset:4px}
+[hidden]{display:none!important}
+.skip{position:absolute;left:-10000px}
+.skip:focus{
+  left:10px;
+  top:10px;
+  background:white;
+  padding:10px;
+  z-index:10;
+}
+@media(max-width:850px){
+  .layout{grid-template-columns:1fr}
+  aside{position:static;max-height:none}
+  nav{columns:2}
+}
+@media(max-width:500px){
+  .layout{padding:0 12px}
+  section{padding:20px}
+  .cards{grid-template-columns:1fr}
+  nav{columns:1}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
+@media print{
+  body{background:white;color:black;font-size:11pt}
+  header{background:white;color:black;padding:0}
+  header p{color:black}
+  aside,.noprint,#flashcards,#practice,footer{display:none!important}
+  .layout{display:block;padding:0;margin:0}
+  section{border:0;padding:0;margin:20px 0}
+  h2,h3{break-after:avoid}
+  tr{break-inside:avoid}
+  .table-wrap{overflow:visible}
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to study guide</a>
+
+<header>
+<div>
+  <div class="eyebrow">Dr. Misty Marlowe • Chapter 2</div>
+  <h1>Biology and Behavior</h1>
+  <p>
+    Follow the message from neuron to nervous system.
+    Connect brain structures to their functions.
+    Practice recognizing the concept when the example changes.
+  </p>
+  <p>
+    12 study sections • 24 flashcards •
+    <span id="questionCount">68</span> practice questions
+  </p>
+</div>
+</header>
+
+<div class="layout">
+<aside>
+  <strong>Your study pathway</strong>
+  <nav aria-label="Study guide navigation">
+    <a href="#start">How to study</a>
+    <a href="#neurons">1. Neuron structures</a>
+    <a href="#signals">2. Neural signals</a>
+    <a href="#transmitters">3. Neurotransmitters</a>
+    <a href="#organization">4. Nervous system organization</a>
+    <a href="#autonomic">5. Autonomic responses</a>
+    <a href="#endocrine">6. Genetics and hormones</a>
+    <a href="#tools">7. Brain research tools</a>
+    <a href="#core">8. Brainstem and cerebellum</a>
+    <a href="#inner">9. Inner brain structures</a>
+    <a href="#cortex">10. Cortex and language</a>
+    <a href="#plasticity">11. Brain change</a>
+    <a href="#hemispheres">12. Hemispheres and biofeedback</a>
+    <a href="#checklist">Final checklist</a>
+    <a href="#flashcards">Retrieval flashcards</a>
+    <a href="#practice">Practice quiz</a>
+  </nav>
+  <button type="button" id="printButton">Print study guide</button>
+</aside>
+
+<main id="main">
+
+<section id="start">
+  <h2>How to use this guide</h2>
+  <p>
+    This guide follows the concepts in your Chapter 2 test bank.
+    Study the relationships between terms, not just isolated definitions.
+  </p>
+  <ol>
+    <li>Read one section, then explain it without looking.</li>
+    <li>Draw a neuron and label the direction of communication.</li>
+    <li>Recreate the nervous system divisions from memory.</li>
+    <li>Match each brain structure to a new example.</li>
+    <li>Take the quiz without notes and study the explanations.</li>
+    <li>Return the next day and retry concepts you missed.</li>
+  </ol>
+
+  <div class="callout">
+    <strong>Your main question:</strong>
+    “What structure or process best explains the specific function described?”
+  </div>
+
+  <p class="small">
+    Practice results identify study needs; they do not guarantee an exam
+    score. Some test-bank statements are simplified or edition dependent.
+    Clarifications appear alongside the relevant concepts.
+  </p>
+</section>
+
+<section id="neurons">
+  <h2>1. Neuron structures: who does what?</h2>
+  <p>
+    <strong>Behavioral neuroscientists</strong> study how biological
+    structures and functions relate to behavior.
+    <strong>Neurons</strong> are specialized cells that receive and transmit information.
+  </p>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Structure</th>
+        <th scope="col">Main role</th>
+        <th scope="col">Memory cue</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dendrites</td>
+        <td>Typically receive incoming messages from other neurons.</td>
+        <td>Receiving branches</td>
+      </tr>
+      <tr>
+        <td>Cell body / soma</td>
+        <td>Contains the nucleus, maintains the cell, and helps integrate input.</td>
+        <td>Cell's maintenance center</td>
+      </tr>
+      <tr>
+        <td>Axon</td>
+        <td>Carries action potentials toward its terminals.</td>
+        <td>Axon carries away</td>
+      </tr>
+      <tr>
+        <td>Terminal buttons</td>
+        <td>Axon endings that release neurotransmitters at chemical synapses.</td>
+        <td>Sending endings</td>
+      </tr>
+      <tr>
+        <td>Myelin sheath</td>
+        <td>Fatty insulation around many axons that speeds signal conduction.</td>
+        <td>Insulation and speed</td>
+      </tr>
+      <tr>
+        <td>Glial cells</td>
+        <td>Support, nourish, protect, and help maintain neurons; some make myelin.</td>
+        <td>Support team</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout">
+    <strong>Typical information flow:</strong>
+    dendrites → cell body → axon → terminal buttons.
+  </div>
+
+  <h3>Hand-and-arm analogy</h3>
+  <p>
+    Fingers resemble branching <strong>dendrites</strong>;
+    the palm resembles the <strong>cell body</strong>;
+    the forearm resembles the <strong>axon</strong>.
+  </p>
+
+  <h3>Part-to-whole questions</h3>
+  <p>
+    From general to specific:
+    <strong>neuron → axon → terminal button</strong>.
+    A terminal button is part of an axon, and an axon is part of a neuron.
+  </p>
+
+  <details>
+    <summary>Check yourself: Which structure receives, carries, and releases?</summary>
+    <p>
+      Dendrites receive; the axon carries the action potential;
+      terminal buttons release neurotransmitters.
+    </p>
+  </details>
+</section>
+
+<section id="signals">
+  <h2>2. Neural signals and synapses</h2>
+
+  <h3>Resting potential</h3>
+  <p>
+    At rest, the inside of a typical neuron is electrically negative relative
+    to the outside, often described as approximately
+    <strong>−70 millivolts</strong>.
+    Resting does not mean the cell is inactive or has no electrical charge.
+  </p>
+
+  <h3>Action potential</h3>
+  <p>
+    An <strong>action potential</strong> is a brief electrical signal
+    traveling along the axon. During its rising phase, the membrane
+    depolarizes; the inside can become positive relative to the outside.
+    It then returns toward its resting condition.
+  </p>
+
+  <div class="callout">
+    <strong>All-or-none:</strong>
+    once threshold is reached, an action potential occurs.
+    A stronger stimulus does not make a single action potential larger;
+    intensity can be represented through firing rate and the activity of more neurons.
+  </div>
+
+  <p>
+    After firing, the membrane enters a <strong>refractory period</strong>.
+    It cannot immediately produce another ordinary action potential during
+    the absolute refractory period.
+  </p>
+
+  <h3>Electrical within; chemical across</h3>
+  <p>
+    In the typical chemical-synapse example used in this chapter,
+    the action potential travels <strong>electrically along the axon</strong>,
+    then neurotransmitters carry the signal
+    <strong>chemically across the synaptic cleft</strong>.
+  </p>
+
+  <ol>
+    <li>An action potential reaches the terminal buttons.</li>
+    <li>Neurotransmitters are released.</li>
+    <li>They cross the synaptic cleft.</li>
+    <li>They bind to receptors on the receiving cell.</li>
+    <li>The receiving neuron's probability of firing changes.</li>
+  </ol>
+
+  <p>
+    The <strong>synapse</strong> is the communication junction.
+    The <strong>synaptic cleft</strong> is the tiny gap within it.
+    Introductory questions often use “synapse” as shorthand for the gap.
+  </p>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th scope="col">Process</th><th scope="col">Effect</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Excitatory message</td><td>Increases the likelihood that the receiving neuron will fire.</td></tr>
+      <tr><td>Inhibitory message</td><td>Decreases the likelihood that the receiving neuron will fire.</td></tr>
+      <tr><td>Reuptake</td><td>Transporters take neurotransmitter back into the releasing neuron.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>
+    A neuron can receive excitatory and inhibitory input at the same time.
+    Its response depends on their combined effects.
+  </p>
+
+  <h3>Mirror neurons</h3>
+  <p>
+    Mirror neurons respond during a particular action and during observation
+    of a similar action performed by another.
+    Remember <strong>doing and observing</strong>.
+  </p>
+  <p class="small">
+    The bank connects mirror neurons to empathy and language-related
+    processes. These broader functions are research questions, not proof
+    that mirror neurons alone explain empathy or language.
+  </p>
+</section>
+
+<section id="transmitters">
+  <h2>3. Neurotransmitters: high-priority associations</h2>
+  <p>
+    Learn the main association, but remember that neurotransmitters
+    participate in multiple pathways and functions.
+  </p>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Neurotransmitter</th>
+        <th scope="col">Chapter association</th>
+        <th scope="col">Memory cue</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dopamine</td>
+        <td>Movement, attention, learning, and reward-related processes.</td>
+        <td>Movement and motivated learning</td>
+      </tr>
+      <tr>
+        <td>Acetylcholine</td>
+        <td>Muscle activation and functions involving learning and memory.</td>
+        <td>Action and remembering</td>
+      </tr>
+      <tr>
+        <td>Serotonin</td>
+        <td>Mood, sleep, appetite, and other regulatory functions.</td>
+        <td>Sleep, satiety, and mood</td>
+      </tr>
+      <tr>
+        <td>GABA</td>
+        <td>A major inhibitory neurotransmitter in the adult brain.</td>
+        <td>Brake</td>
+      </tr>
+      <tr>
+        <td>Glutamate</td>
+        <td>A major excitatory neurotransmitter; important in learning and memory.</td>
+        <td>Accelerator</td>
+      </tr>
+      <tr>
+        <td>Endorphins</td>
+        <td>Endogenous opioid peptides associated with pain modulation.</td>
+        <td>Internal pain relief</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Disorder associations in the bank</h3>
+  <ul>
+    <li><strong>Parkinson's disease → dopamine:</strong> loss of dopamine-producing neurons in a movement-related pathway.</li>
+    <li><strong>Alzheimer's disease → acetylcholine:</strong> the bank emphasizes reduced cholinergic functioning.</li>
+    <li><strong>Sleep, appetite, and mood → serotonin:</strong> a common chapter association.</li>
+  </ul>
+
+  <div class="callout warning">
+    <strong>Avoid the “one chemical = one disorder” mistake.</strong>
+    These are learning associations, not complete explanations or ways to
+    diagnose neurotransmitter levels from someone's symptoms.
+    In neural communication, serotonin is a neurotransmitter; the bank's
+    wording that calls it a hormone is imprecise.
+  </div>
+</section>
+
+<section id="organization">
+  <h2>4. Nervous system organization</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Division</th>
+        <th scope="col">Contains or controls</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Central nervous system: CNS</td><td>Brain and spinal cord.</td></tr>
+      <tr><td>Peripheral nervous system: PNS</td><td>Nerves connecting the CNS with the rest of the body.</td></tr>
+      <tr><td>Somatic division of the PNS</td><td>Sensory communication and skeletal-muscle movement.</td></tr>
+      <tr><td>Autonomic division of the PNS</td><td>Regulation of internal organs, glands, smooth muscle, and cardiac muscle.</td></tr>
+      <tr><td>Sympathetic division</td><td>Autonomic mobilization for action.</td></tr>
+      <tr><td>Parasympathetic division</td><td>Autonomic support for restoration and routine maintenance.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout">
+    <strong>Nervous system:</strong> central + peripheral.<br>
+    <strong>Peripheral:</strong> somatic + autonomic.<br>
+    <strong>Autonomic:</strong> sympathetic + parasympathetic.
+  </div>
+
+  <h3>Three neuron roles</h3>
+  <ul>
+    <li><strong>Sensory / afferent:</strong> carry information toward the CNS.</li>
+    <li><strong>Motor / efferent:</strong> carry commands away from the CNS to effectors.</li>
+    <li><strong>Interneurons:</strong> connect and process information within neural circuits.</li>
+  </ul>
+
+  <p><strong>Memory cue:</strong> Afferent arrives; efferent exits.</p>
+
+  <h3>Spinal cord and reflexes</h3>
+  <p>
+    The spinal cord is a major communication pathway between brain and body.
+    It can also coordinate some simple <strong>reflexes</strong>:
+    automatic responses to a stimulus.
+  </p>
+  <p>
+    Pulling your hand away from a hot surface can begin through a spinal
+    circuit before conscious processing of the pain is complete.
+    Information still travels to the brain.
+  </p>
+
+  <div class="callout warning">
+    <strong>Do not equate “automatic” with “autonomic.”</strong>
+    A withdrawal reflex moves skeletal muscles through somatic pathways.
+    A pounding heart involves autonomic regulation.
+  </div>
+
+  <p class="small">
+    The chapter describes nervous system control as hierarchical.
+    Remember that actual communication also involves feedback and interactions
+    across levels.
+  </p>
+</section>
+
+<section id="autonomic">
+  <h2>5. Sympathetic vs. parasympathetic</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Division</th>
+        <th scope="col">Typical role</th>
+        <th scope="col">Scenario clue</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Sympathetic</td>
+        <td>Mobilizes resources during challenge or threat.</td>
+        <td>Pounding heart, dilated pupils, readiness for action.</td>
+      </tr>
+      <tr>
+        <td>Parasympathetic</td>
+        <td>Supports recovery, digestion, and energy conservation.</td>
+        <td>Settling down after discovering there is no danger.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout">
+    <strong>Sympathetic = mobilize.</strong><br>
+    <strong>Parasympathetic = restore.</strong>
+  </div>
+
+  <p>
+    If someone sees a threatening animal, increased cardiovascular arousal
+    points toward sympathetic activity.
+    After the threat ends, return toward baseline points toward parasympathetic activity.
+  </p>
+
+  <h3>Separate the parts of an emergency response</h3>
+  <ul>
+    <li><strong>Jumping out of the way:</strong> skeletal-muscle movement, involving somatic motor pathways.</li>
+    <li><strong>Heart pounding:</strong> autonomic arousal, commonly sympathetic.</li>
+    <li><strong>Calming afterward:</strong> parasympathetic contribution.</li>
+  </ul>
+
+  <p class="small">
+    The bank's historical “voodoo death” item refers to extreme sympathetic
+    activation. Treat that phrase as a historical textbook example rather
+    than a complete account of a medical event.
+  </p>
+</section>
+
+<section id="endocrine">
+  <h2>6. Genetics and the endocrine system</h2>
+
+  <h3>Behavioral genetics vs. evolutionary psychology</h3>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Field</th><th scope="col">Main question</th></tr></thead>
+    <tbody>
+      <tr><td>Behavioral genetics</td><td>How do genetic and environmental differences contribute to behavioral differences?</td></tr>
+      <tr><td>Evolutionary psychology</td><td>How might inherited tendencies reflect ancestral selection and adaptation?</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>
+    Comparing identical and fraternal twins raised together or apart is a
+    classic <strong>behavioral genetics</strong> approach.
+    Genetic influence does not mean behavior is fixed or unaffected by experience.
+  </p>
+
+  <h3>Hormones vs. neurotransmitters</h3>
+  <p>
+    The <strong>endocrine system</strong> releases
+    <strong>hormones into the bloodstream</strong>.
+    Hormones influence target tissues involved in growth, metabolism,
+    reproduction, and other functions.
+  </p>
+  <p>
+    In the chapter's basic contrast, neurotransmitters act across synapses;
+    hormones travel through blood.
+    Some chemical messengers can serve different roles in different contexts.
+  </p>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Gland or hormone</th>
+        <th scope="col">Key association</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Hypothalamus</td>
+        <td>Links neural and endocrine regulation; regulates the pituitary.</td>
+      </tr>
+      <tr>
+        <td>Pituitary gland</td>
+        <td>Located near the hypothalamus; regulates several other endocrine glands and releases growth hormone.</td>
+      </tr>
+      <tr>
+        <td>Growth hormone</td>
+        <td>Supports growth; excess during development can contribute to unusual height.</td>
+      </tr>
+      <tr>
+        <td>Testosterone</td>
+        <td>Contributes to sexual development and muscle-related effects; present in people of all sexes.</td>
+      </tr>
+      <tr>
+        <td>Oxytocin</td>
+        <td>Associated with childbirth and milk ejection; produced in the hypothalamus and released through the posterior pituitary.</td>
+      </tr>
+      <tr>
+        <td>Melatonin</td>
+        <td>Associated with daily timing and sleep-related rhythms.</td>
+      </tr>
+      <tr>
+        <td>Aldosterone</td>
+        <td>Helps regulate sodium and potassium balance.</td>
+      </tr>
+      <tr>
+        <td>Erythropoietin</td>
+        <td>Stimulates red blood cell production.</td>
+      </tr>
+      <tr>
+        <td>Anabolic-androgenic steroids</td>
+        <td>Can increase muscle mass; misuse carries health and behavioral risks.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout">
+    <strong>Test connections:</strong>
+    hypothalamus → pituitary regulation;
+    pituitary → growth hormone;
+    bloodstream → hormones;
+    nursing-related milk ejection → oxytocin.
+  </div>
+
+  <p class="small">
+    The pituitary's “master gland” label is a simplification:
+    it is regulated by the hypothalamus, and not all endocrine activity is
+    directly controlled by the pituitary.
+    Effects and risks of artificial hormones depend on the substance and use.
+  </p>
+</section>
+
+<section id="tools">
+  <h2>7. Brain research tools</h2>
+  <p>
+    Focus on <strong>what the tool measures or changes</strong>.
+    Not every technique is an imaging method.
+  </p>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Tool</th>
+        <th scope="col">What it does</th>
+        <th scope="col">Recognition clue</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>EEG: electroencephalography</td>
+        <td>Records electrical activity using scalp electrodes.</td>
+        <td>Electrodes and brain-wave patterns.</td>
+      </tr>
+      <tr>
+        <td>MRI</td>
+        <td>Produces detailed images of brain structure.</td>
+        <td>Anatomy and tissue structure.</td>
+      </tr>
+      <tr>
+        <td>fMRI: functional MRI</td>
+        <td>Uses blood-oxygen-related changes as an indirect index of activity.</td>
+        <td>Functional mapping during tasks.</td>
+      </tr>
+      <tr>
+        <td>PET: positron emission tomography</td>
+        <td>Uses a radioactive tracer to examine metabolic or other molecular processes.</td>
+        <td>Tracer and biochemical activity.</td>
+      </tr>
+      <tr>
+        <td>TMS: transcranial magnetic stimulation</td>
+        <td>Uses magnetic pulses to influence neural activity.</td>
+        <td>Stimulation or temporary disruption, not a brain photograph.</td>
+      </tr>
+      <tr>
+        <td>Optogenetics</td>
+        <td>Uses genetically introduced light-sensitive proteins to control selected cells.</td>
+        <td>Genetic engineering + light.</td>
+      </tr>
+      <tr>
+        <td>Neuropixels probes</td>
+        <td>Implanted recording probes that monitor many neurons.</td>
+        <td>High-density electrical recordings.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Common scenario matches</h3>
+  <ul>
+    <li><strong>Scalp electrodes while reading:</strong> EEG.</li>
+    <li><strong>Seizure-related electrical activity:</strong> EEG.</li>
+    <li><strong>Mapping activity near a planned surgical site:</strong> fMRI can contribute.</li>
+    <li><strong>Radioactive tracer:</strong> PET.</li>
+    <li><strong>Brief magnetic pulses:</strong> TMS.</li>
+    <li><strong>Genetically targeted light sensitivity:</strong> optogenetics.</li>
+    <li><strong>Implanted probe recording hundreds of neurons:</strong> Neuropixels.</li>
+  </ul>
+
+  <div class="callout warning">
+    <strong>TMS does not physically cut the brain.</strong>
+    A temporary disruption can help test a region's contribution to a task.
+    Repeated TMS also has clinical applications.
+    EEG records electrical activity; it does not produce the same type of
+    anatomical image as MRI.
+  </div>
+</section>
+
+<section id="core">
+  <h2>8. Brainstem and cerebellum</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Structure</th>
+        <th scope="col">High-priority function</th>
+        <th scope="col">Scenario clue</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Medulla</td>
+        <td>Vital autonomic functions, including breathing and cardiovascular regulation.</td>
+        <td>Heartbeat and breathing.</td>
+      </tr>
+      <tr>
+        <td>Pons</td>
+        <td>Communication among brain regions; contributes to movement and sleep-related processes.</td>
+        <td>“Bridge”; the bank emphasizes coordinating movement.</td>
+      </tr>
+      <tr>
+        <td>Cerebellum</td>
+        <td>Coordination, balance, timing, and motor learning.</td>
+        <td>Stumbling, poor coordination, difficulty maintaining balance.</td>
+      </tr>
+      <tr>
+        <td>Reticular formation</td>
+        <td>Networks involved in arousal, alertness, sleep–wake regulation, and processing incoming information.</td>
+        <td>Wakefulness and background-input filtering.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout">
+    <strong>Medulla = vital functions.</strong><br>
+    <strong>Pons = bridge.</strong><br>
+    <strong>Cerebellum = coordination.</strong><br>
+    <strong>Reticular formation = arousal.</strong>
+  </div>
+
+  <p>
+    The medulla, pons, and cerebellum are associated with the hindbrain.
+    The reticular formation extends through multiple brainstem regions.
+  </p>
+
+  <p>
+    If a question describes trouble walking in a straight line, maintaining
+    balance, or coordinating movements, <strong>cerebellum</strong> is the
+    strongest chapter-level match.
+  </p>
+</section>
+
+<section id="inner">
+  <h2>9. Inner brain structures</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Structure</th>
+        <th scope="col">Main association</th>
+        <th scope="col">Memory cue</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Thalamus</td>
+        <td>Major relay for sensory and other information traveling to cortical regions.</td>
+        <td>Relay station</td>
+      </tr>
+      <tr>
+        <td>Hypothalamus</td>
+        <td>Homeostasis, hunger, thirst, temperature regulation, endocrine control, and reproductive behavior.</td>
+        <td>Internal balance</td>
+      </tr>
+      <tr>
+        <td>Hippocampus</td>
+        <td>Formation of new declarative memories, including memories of experiences.</td>
+        <td>New memory formation</td>
+      </tr>
+      <tr>
+        <td>Amygdala</td>
+        <td>Emotional significance and emotional learning, especially threat-related learning.</td>
+        <td>Emotional significance</td>
+      </tr>
+      <tr>
+        <td>Limbic system</td>
+        <td>A traditional grouping of interconnected structures associated with emotion, motivation, and memory.</td>
+        <td>Emotion, motivation, memory</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Thalamus vs. hypothalamus</h3>
+  <p>
+    Routing incoming sensory information suggests the <strong>thalamus</strong>.
+    Regulating hunger, thirst, temperature, and internal balance suggests
+    the <strong>hypothalamus</strong>.
+  </p>
+
+  <p>
+    <strong>Homeostasis</strong> means maintaining a relatively stable
+    internal physiological condition.
+  </p>
+
+  <h3>Hippocampus vs. amygdala</h3>
+  <p>
+    Difficulty forming new memories of experiences suggests the
+    <strong>hippocampus</strong>.
+    Emotional significance and threat-related learning suggest the
+    <strong>amygdala</strong>.
+  </p>
+
+  <div class="callout">
+    A person who remembers many older events but cannot form new memories
+    after surgery illustrates the chapter's hippocampal-memory distinction.
+    The hippocampus is not a permanent storage location for every memory.
+  </div>
+</section>
+
+<section id="cortex">
+  <h2>10. Cerebral cortex, lobes, and language</h2>
+  <p>
+    The <strong>cerebral cortex</strong> is the outer layer of the cerebrum.
+    It supports sophisticated sensory processing, voluntary action, language,
+    reasoning, and other functions through interacting networks.
+  </p>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Lobe</th>
+        <th scope="col">Location</th>
+        <th scope="col">Key chapter functions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Frontal</td>
+        <td>Front</td>
+        <td>Voluntary movement, planning, goal setting, inhibition, and aspects of speech production.</td>
+      </tr>
+      <tr>
+        <td>Parietal</td>
+        <td>Upper region behind the frontal lobe</td>
+        <td>Body sensation and spatial processing.</td>
+      </tr>
+      <tr>
+        <td>Temporal</td>
+        <td>Sides near the temples</td>
+        <td>Auditory processing and aspects of language and memory.</td>
+      </tr>
+      <tr>
+        <td>Occipital</td>
+        <td>Back</td>
+        <td>Visual processing.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>
+    The bank's simplified front-to-back order is
+    <strong>frontal → parietal/temporal → occipital</strong>.
+    The parietal and temporal lobes occupy different upper and side regions,
+    rather than forming one straight line.
+  </p>
+
+  <h3>Functional areas</h3>
+  <ul>
+    <li><strong>Primary motor cortex:</strong> frontal lobe; voluntary movement.</li>
+    <li><strong>Primary somatosensory cortex:</strong> parietal lobe; body sensations.</li>
+    <li><strong>Auditory cortex:</strong> temporal lobe; sound processing.</li>
+    <li><strong>Visual cortex:</strong> occipital lobe; visual processing.</li>
+    <li><strong>Association areas:</strong> integrate information and support complex cognition.</li>
+  </ul>
+
+  <p>
+    The amount of cortical representation does not simply reflect body-part
+    size. Fine motor control and sensory sensitivity influence how much
+    tissue is devoted to different body regions.
+  </p>
+
+  <h3>Executive functions and Phineas Gage</h3>
+  <p>
+    Executive functions include planning, setting goals, monitoring behavior,
+    and inhibition. The case of <strong>Phineas Gage</strong> is associated
+    with frontal-region injury and changes in behavior, highlighting the
+    importance of frontal association networks.
+  </p>
+
+  <h3>Broca's vs. Wernicke's aphasia</h3>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Pattern</th>
+        <th scope="col">Main chapter clue</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Broca's aphasia</td>
+        <td>Speech is effortful and nonfluent; comprehension is often relatively better preserved.</td>
+      </tr>
+      <tr>
+        <td>Wernicke's aphasia</td>
+        <td>Language comprehension is impaired; speech can remain fluent but lack clear meaning.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout">
+    <strong>Broca's: getting words out is difficult.</strong><br>
+    <strong>Wernicke's: understanding language is difficult.</strong>
+  </div>
+
+  <p class="small">
+    These are simplified patterns. Actual language abilities depend on
+    distributed networks and the location and extent of injury.
+  </p>
+</section>
+
+<section id="plasticity">
+  <h2>11. Neuroplasticity and neurogenesis</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Term</th><th scope="col">Meaning</th><th scope="col">Recognition clue</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Neuroplasticity</td>
+        <td>The nervous system's capacity to change its connections, functioning, or organization.</td>
+        <td>Learning-related change or reorganization after injury.</td>
+      </tr>
+      <tr>
+        <td>Neurogenesis</td>
+        <td>Formation of new neurons.</td>
+        <td>The birth of neurons, not simply new connections.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout">
+    <strong>Plasticity = change.</strong><br>
+    <strong>Genesis = creation.</strong>
+  </div>
+
+  <p>
+    Strengthening or reorganizing existing neural connections is
+    neuroplasticity even when no new neurons are created.
+    Neuroplasticity does not guarantee complete recovery from every injury.
+  </p>
+
+  <p class="small">
+    The bank associates adult neurogenesis with learning and memory.
+    The extent and measurement of adult human neurogenesis remain active
+    research questions. Avoid memorizing a universal daily neuron-production
+    number as established fact.
+  </p>
+</section>
+
+<section id="hemispheres">
+  <h2>12. Hemispheres, split-brain research, and biofeedback</h2>
+
+  <h3>Hemispheres and opposite-side control</h3>
+  <p>
+    The cerebrum has two <strong>hemispheres</strong>.
+    Many motor and sensory pathways are predominantly
+    <strong>contralateral</strong>: each hemisphere is associated with the
+    opposite side of the body.
+  </p>
+
+  <h3>Lateralization</h3>
+  <p>
+    <strong>Lateralization</strong> means some functions are more strongly
+    represented in one hemisphere than the other.
+  </p>
+  <ul>
+    <li><strong>Left hemisphere:</strong> language is left-dominant in many people.</li>
+    <li><strong>Right hemisphere:</strong> often emphasized in spatial processing and aspects of emotional tone and face processing.</li>
+  </ul>
+
+  <div class="callout warning">
+    These are tendencies, not exclusive assignments.
+    Both hemispheres cooperate in normal functioning.
+    People are not simply “left-brained” or “right-brained.”
+  </div>
+
+  <h3>Corpus callosum and split-brain</h3>
+  <p>
+    The <strong>corpus callosum</strong> is a large bundle of fibers
+    connecting the hemispheres.
+    Severing it can reduce the transfer of certain information between them.
+    People who have undergone this procedure are often called
+    <strong>split-brain patients</strong>.
+  </p>
+  <p>
+    Split-brain effects depend on the task and how information is presented;
+    they do not mean that all ordinary daily activities necessarily become impossible.
+  </p>
+
+  <h3>Biofeedback</h3>
+  <p>
+    <strong>Biofeedback</strong> provides information about physiological
+    activity so a person can learn to influence it.
+    For example, a display of muscle tension can help someone practice relaxation.
+  </p>
+  <p>
+    The defining clue is <strong>feedback about bodily activity</strong>,
+    not a magnetic pulse, brain scan, or surgical procedure.
+  </p>
+
+  <details>
+    <summary>Edition-sensitive test-bank claims to verify</summary>
+    <ul>
+      <li>
+        The numerical neuron and connection items appear to target
+        “1 trillion” and “10 quadrillion,” respectively. The bank has no marked
+        key, and these should not be treated as universal modern estimates.
+        Confirm the figures expected in your assigned text.
+      </li>
+      <li>
+        Corpus callosum size and language lateralization cannot reliably be
+        predicted for an individual from sex or gender alone. Check the
+        instructor's intended interpretation of those items.
+      </li>
+      <li>
+        The question about jumping away from a car omits the best somatic
+        movement option. Distinguish the skeletal movement from the
+        accompanying autonomic arousal.
+      </li>
+      <li>
+        Symptoms alone do not establish a specific neurotransmitter deficiency.
+      </li>
+    </ul>
+  </details>
+</section>
+
+<section id="checklist">
+  <h2>Final retrieval checklist</h2>
+  <p>Without notes, can you:</p>
+  <ul>
+    <li>Draw a neuron and explain each structure?</li>
+    <li>Trace an action potential and chemical synaptic communication?</li>
+    <li>Explain resting potential, threshold, all-or-none firing, and the refractory period?</li>
+    <li>Distinguish excitation, inhibition, and reuptake?</li>
+    <li>Match the six major neurotransmitters to their chapter associations?</li>
+    <li>Rebuild the CNS/PNS and somatic/autonomic divisions?</li>
+    <li>Separate afferent from efferent pathways?</li>
+    <li>Distinguish a somatic reflex from autonomic arousal?</li>
+    <li>Separate sympathetic mobilization from parasympathetic recovery?</li>
+    <li>Explain behavioral genetics and evolutionary psychology?</li>
+    <li>Connect hypothalamus, pituitary, and hormones?</li>
+    <li>Identify EEG, MRI/fMRI, PET, TMS, optogenetics, and Neuropixels?</li>
+    <li>Match medulla, pons, cerebellum, and reticular formation to their functions?</li>
+    <li>Separate thalamus, hypothalamus, hippocampus, and amygdala?</li>
+    <li>Identify each cortical lobe and its main chapter functions?</li>
+    <li>Distinguish Broca's from Wernicke's aphasia?</li>
+    <li>Separate neuroplasticity from neurogenesis?</li>
+    <li>Explain contralateral control, lateralization, and the corpus callosum?</li>
+    <li>Recognize biofeedback?</li>
+  </ul>
+
+  <h3>A short study schedule</h3>
+  <p><strong>Session 1:</strong> Sections 1–5; draw the neuron and nervous system divisions.</p>
+  <p><strong>Session 2:</strong> Sections 6–12; recreate the brain structure and research-tool tables.</p>
+  <p><strong>Next day:</strong> Complete the quiz without notes and review missed topics.</p>
+  <p><strong>Before the test:</strong> Explain the checklist aloud and generate one example for each major distinction.</p>
+</section>
+
+<section id="flashcards">
+  <h2>Retrieval flashcards</h2>
+  <p>Say your answer before opening the card.</p>
+  <div class="cards" id="cardContainer"></div>
+</section>
+
+<section id="practice">
+  <h2>Practice quiz</h2>
+  <p>
+    Choose all topics or focus on one area.
+    Questions and answer choices shuffle for each new attempt.
+    Explanations appear after grading.
+  </p>
+
+  <div class="tools">
+    <label for="topic">Topic:</label>
+    <select id="topic">
+      <option value="all">All topics</option>
+    </select>
+    <button type="button" id="startButton">Start new attempt</button>
+  </div>
+
+  <p class="small">
+    Starting a new attempt clears current answers.
+    Responses stay in this browser and are not submitted.
+    Reloading clears the session.
+  </p>
+
+  <p id="progress" role="status" aria-live="polite"></p>
+  <div id="results" class="results" tabindex="-1" hidden></div>
+
+  <form id="quizForm">
+    <div id="questionContainer"></div>
+    <div class="tools">
+      <button class="primary" type="submit" id="gradeButton">Grade attempt</button>
+      <button type="button" id="retryButton" hidden>Retry missed questions</button>
+    </div>
+  </form>
+
+  <noscript>
+    <p>Enable JavaScript for flashcards and practice questions. The study guide above remains readable.</p>
+  </noscript>
+</section>
+
+<section id="sources">
+  <h2>Further reading</h2>
+  <p>
+    Study content follows the supplied Chapter 2 bank.
+    These sources provide additional scientific context:
+  </p>
+  <ul>
+    <li><a href="https://www.ninds.nih.gov/health-information/public-education/brain-basics">NINDS: Brain Basics</a></li>
+    <li><a href="https://www.nimh.nih.gov/health/topics/brain-stimulation-therapies/brain-stimulation-therapies">NIMH: Brain Stimulation Therapies</a></li>
+    <li><a href="https://www.nimh.nih.gov/research/research-funded-by-nimh/rdoc/units/molecules/149897">NIMH: Serotonin</a></li>
+    <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8785302/">What Happened to Mirror Neurons?</a></li>
+    <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10665662/">Adult Human Neurogenesis: A View From Two Schools of Thought</a></li>
+  </ul>
+</section>
+
+</main>
+</div>
+
+<footer>
+  Original practice questions based on Chapter 2 topics.
+  Practice performance does not guarantee an exam score.
+</footer>
+
+<script>
+"use strict";
+
+/*
+Question format:
+[
+  topic,
+  prompt,
+  [four options],
+  correct option index (0–3),
+  explanation
+]
+*/
+
+const questions = [
+  [
+    "Neuron structures",
+    "A researcher studies how biological structures and functions influence behavior. This researcher is a:",
+    ["Behavioral neuroscientist","Program evaluator","Forensic psychologist","Survey designer"],
+    0,
+    "Behavioral neuroscience examines biological structures and functions in relation to behavior."
+  ],
+  [
+    "Neuron structures",
+    "Which cells help support and nourish neurons?",
+    ["Terminal buttons","Glial cells","Synaptic clefts","Neurotransmitters"],
+    1,
+    "Glial cells help maintain, support, and protect neurons. Some also produce myelin."
+  ],
+  [
+    "Neuron structures",
+    "Which structures typically receive incoming messages from other neurons?",
+    ["Axon terminals","Myelin sheaths","Dendrites","Hormones"],
+    2,
+    "Dendrites are the branching receiving structures in the standard neuron model."
+  ],
+  [
+    "Neuron structures",
+    "Which structure carries action potentials toward the neuron's terminals?",
+    ["Cell nucleus","Synaptic cleft","Pituitary gland","Axon"],
+    3,
+    "The axon carries action potentials away from the cell body region toward its terminals."
+  ],
+  [
+    "Neuron structures",
+    "Where are terminal buttons located?",
+    ["At the ends of axon branches","Inside the pituitary","On the myelin sheath only","Inside the nucleus"],
+    0,
+    "Terminal buttons are axon endings that release neurotransmitters at chemical synapses."
+  ],
+  [
+    "Neuron structures",
+    "Which sequence best represents typical information flow through a neuron?",
+    [
+      "Axon → dendrites → cell body",
+      "Dendrites → cell body → axon → terminals",
+      "Terminals → myelin → nucleus",
+      "Cell body → dendrites → myelin"
+    ],
+    1,
+    "The standard sequence is incoming dendritic input, integration near the cell body, and signaling along the axon to terminals."
+  ],
+  [
+    "Neuron structures",
+    "What is a major function of the myelin sheath?",
+    [
+      "To release growth hormone",
+      "To store all memories",
+      "To insulate many axons and speed conduction",
+      "To replace the synaptic cleft"
+    ],
+    2,
+    "Myelin is fatty insulation that supports rapid conduction along many axons."
+  ],
+  [
+    "Neural communication",
+    "A typical resting membrane potential is approximately:",
+    ["+70 volts","Zero in every neuron","+700 millivolts","−70 millivolts"],
+    3,
+    "The chapter describes the resting inside of the neuron as negative relative to the outside, often near −70 mV."
+  ],
+  [
+    "Neural communication",
+    "What does the all-or-none principle describe?",
+    [
+      "Once threshold is reached, an action potential occurs.",
+      "A stronger stimulus makes every action potential larger.",
+      "Neurons cannot receive inhibitory input.",
+      "Every neuron fires continuously."
+    ],
+    0,
+    "Action potential generation is all-or-none. Stimulus intensity is not encoded by making one action potential progressively larger."
+  ],
+  [
+    "Neural communication",
+    "During the rising phase of an action potential, the membrane:",
+    [
+      "Always remains at its resting value",
+      "Depolarizes, and the inside may become positive relative to the outside",
+      "Turns into a hormone",
+      "Permanently loses its electrical properties"
+    ],
+    1,
+    "The membrane potential becomes less negative and can briefly become positive before returning toward rest."
+  ],
+  [
+    "Neural communication",
+    "Why can a neuron not immediately fire another ordinary action potential during its absolute refractory period?",
+    [
+      "The dendrites disappear.",
+      "All neurotransmitters become hormones.",
+      "The membrane's firing machinery must recover.",
+      "The axon turns into myelin."
+    ],
+    2,
+    "The absolute refractory period reflects a temporary state in which another action potential cannot be generated."
+  ],
+  [
+    "Neural communication",
+    "A neuron responds both when an action is performed and when a similar action is observed. It has:",
+    ["A hormonal response only","No electrical activity","A spinal reflex only","Mirror-like response properties"],
+    3,
+    "The defining mirror-neuron clue is responding during both action execution and observation."
+  ],
+  [
+    "Neural communication",
+    "The tiny gap across which neurotransmitters travel at a chemical synapse is the:",
+    ["Synaptic cleft","Axon nucleus","Myelin layer","Cerebral cortex"],
+    0,
+    "The synaptic cleft is the gap within the synaptic junction."
+  ],
+  [
+    "Neural communication",
+    "What is the role of a neurotransmitter in the chapter's typical synapse example?",
+    [
+      "To carry hormones through blood",
+      "To chemically signal across a synapse",
+      "To physically join the two neurons",
+      "To replace an axon"
+    ],
+    1,
+    "Neurotransmitters are chemical messengers released by the sending cell and detected by receptors."
+  ],
+  [
+    "Neural communication",
+    "An excitatory message generally:",
+    [
+      "Guarantees permanent firing",
+      "Prevents all future activity",
+      "Increases the receiving neuron's likelihood of firing",
+      "Destroys inhibitory receptors"
+    ],
+    2,
+    "Excitatory input increases firing probability, but a neuron integrates multiple inputs."
+  ],
+  [
+    "Neural communication",
+    "An inhibitory message generally:",
+    [
+      "Makes every action potential larger",
+      "Always triggers immediate firing",
+      "Eliminates all excitatory messages",
+      "Decreases the receiving neuron's likelihood of firing"
+    ],
+    3,
+    "Inhibitory input reduces the likelihood of firing; it can coexist with excitatory input."
+  ],
+  [
+    "Neural communication",
+    "Taking released neurotransmitter back into the sending neuron is called:",
+    ["Reuptake","Lateralization","Neurogenesis","Homeostasis"],
+    0,
+    "Reuptake uses transporters to return neurotransmitter to the releasing neuron."
+  ],
+  [
+    "Neurotransmitters",
+    "Which neurotransmitter is strongly associated in this chapter with movement, attention, and learning?",
+    ["Melatonin","Dopamine","Oxytocin","Aldosterone"],
+    1,
+    "Dopamine participates in movement, attention, learning, and reward-related processes."
+  ],
+  [
+    "Neurotransmitters",
+    "Which disorder–neurotransmitter pairing matches the chapter?",
+    [
+      "Parkinson's disease—endorphins",
+      "Parkinson's disease—oxytocin",
+      "Parkinson's disease—dopamine",
+      "Parkinson's disease—melatonin"
+    ],
+    2,
+    "Parkinson's disease involves loss of dopamine-producing neurons in a movement-related pathway."
+  ],
+  [
+    "Neurotransmitters",
+    "The bank's Alzheimer's disease association emphasizes:",
+    ["Aldosterone","Testosterone","Endorphins","Acetylcholine"],
+    3,
+    "Reduced cholinergic functioning is a chapter association, though Alzheimer's disease is not explained by one chemical alone."
+  ],
+  [
+    "Neurotransmitters",
+    "Which neurotransmitter is associated with sleep, appetite, and mood regulation?",
+    ["Serotonin","Growth hormone","Erythropoietin","Aldosterone"],
+    0,
+    "Serotonin participates in these regulatory functions. Symptoms alone cannot establish a serotonin deficiency."
+  ],
+  [
+    "Neurotransmitters",
+    "Which is a major inhibitory neurotransmitter in the adult brain?",
+    ["Glutamate","GABA","Growth hormone","Testosterone"],
+    1,
+    "GABA is the major inhibitory neurotransmitter emphasized in the chapter."
+  ],
+  [
+    "Neurotransmitters",
+    "Which is a major excitatory neurotransmitter involved in learning and memory?",
+    ["Aldosterone","Melatonin","Glutamate","Oxytocin"],
+    2,
+    "Glutamate is a major excitatory neurotransmitter and supports many learning-related processes."
+  ],
+  [
+    "Neurotransmitters",
+    "Which chemical group is associated with the body's own opioid pain-modulating mechanisms?",
+    ["Growth hormones","Thyroid hormones","Adipokines","Endorphins"],
+    3,
+    "Endorphins are endogenous opioid peptides involved in pain modulation."
+  ],
+  [
+    "Nervous system",
+    "Which structures make up the central nervous system?",
+    [
+      "Brain and spinal cord",
+      "Only skeletal muscles",
+      "Sympathetic and parasympathetic nerves only",
+      "Pituitary and thyroid"
+    ],
+    0,
+    "The CNS consists of the brain and spinal cord."
+  ],
+  [
+    "Nervous system",
+    "In the chapter's organizational scheme, the peripheral nervous system includes which two major divisions?",
+    ["Frontal and occipital","Somatic and autonomic","Medulla and pons","Thalamus and hypothalamus"],
+    1,
+    "The PNS is organized into somatic and autonomic divisions in the bank."
+  ],
+  [
+    "Nervous system",
+    "Commands that move skeletal muscles primarily use which division?",
+    ["Endocrine","Parasympathetic only","Somatic","Limbic"],
+    2,
+    "Somatic motor pathways control skeletal muscles, including voluntary movements."
+  ],
+  [
+    "Nervous system",
+    "Regulation of internal organs and cardiac muscle most directly involves:",
+    ["The visual cortex only","The corpus callosum only","The somatic division only","The autonomic division"],
+    3,
+    "Autonomic pathways regulate internal organs, glands, and smooth and cardiac muscle."
+  ],
+  [
+    "Nervous system",
+    "Afferent neurons generally carry information:",
+    ["Toward the CNS","Away from the CNS to muscles","Only between endocrine glands","Only from the pituitary to blood"],
+    0,
+    "Afferent means arriving toward the CNS; these are sensory pathways."
+  ],
+  [
+    "Nervous system",
+    "Efferent pathways generally carry commands:",
+    [
+      "From sense organs toward the CNS",
+      "Away from the CNS to effectors",
+      "Only across the corpus callosum",
+      "Only inside the hippocampus"
+    ],
+    1,
+    "Efferent means exiting the CNS toward muscles and other effectors."
+  ],
+  [
+    "Nervous system",
+    "A hand begins to withdraw from heat before conscious pain processing is complete. This illustrates:",
+    ["A PET scan","A hormone deficiency","A spinal reflex","A split-brain task"],
+    2,
+    "Some withdrawal responses are coordinated through spinal circuits while information also travels to the brain."
+  ],
+  [
+    "Autonomic responses",
+    "A threat is followed by a pounding heart and dilated pupils. Which division is emphasized?",
+    ["Parasympathetic","Somatic sensory only","Enteric only","Sympathetic"],
+    3,
+    "Sympathetic activity mobilizes resources for action during threat or challenge."
+  ],
+  [
+    "Autonomic responses",
+    "A person settles down after learning that an apparent threat was harmless. Which division contributes to recovery?",
+    ["Parasympathetic","Sympathetic only","Motor cortex only","Corpus callosum"],
+    0,
+    "Parasympathetic activity supports recovery and routine maintenance."
+  ],
+  [
+    "Genetics and hormones",
+    "Comparing identical and fraternal twins to examine inherited influences is most characteristic of:",
+    ["Program evaluation","Behavioral genetics","Optogenetics","Biofeedback"],
+    1,
+    "Behavioral genetics examines genetic and environmental contributions to behavioral differences."
+  ],
+  [
+    "Genetics and hormones",
+    "Asking how a behavioral tendency might reflect ancestral adaptation best fits:",
+    ["Forensic psychology","School psychology","Evolutionary psychology","Survey design"],
+    2,
+    "Evolutionary psychology investigates possible influences of selection and inherited adaptive tendencies."
+  ],
+  [
+    "Genetics and hormones",
+    "The endocrine system releases which chemical messengers into blood?",
+    ["Myelin","Dendrites","Synapses","Hormones"],
+    3,
+    "Hormones circulate through the bloodstream and affect target tissues."
+  ],
+  [
+    "Genetics and hormones",
+    "Which gland is located near and regulated by the hypothalamus?",
+    ["Pituitary","Salivary","Sweat","Tear"],
+    0,
+    "The pituitary is closely connected to hypothalamic regulation."
+  ],
+  [
+    "Genetics and hormones",
+    "The chapter connects unusual growth associated with excess growth hormone to which gland?",
+    ["Pineal","Pituitary","Salivary","Lacrimal"],
+    1,
+    "The anterior pituitary releases growth hormone. Height alone does not diagnose a gland disorder."
+  ],
+  [
+    "Genetics and hormones",
+    "Which hormone is associated with milk ejection during nursing?",
+    ["Melatonin","Aldosterone","Oxytocin","Erythropoietin"],
+    2,
+    "Oxytocin is produced in the hypothalamus and released through the posterior pituitary; it contributes to milk ejection."
+  ],
+  [
+    "Genetics and hormones",
+    "Which hormone is associated in the bank with muscle-related effects and increased strength?",
+    ["Melatonin","Erythropoietin","Oxytocin","Testosterone"],
+    3,
+    "Testosterone has muscle-related effects and is present in people of all sexes."
+  ],
+  [
+    "Brain research tools",
+    "Researchers record brain-wave activity using scalp electrodes. Which method is this?",
+    ["EEG","PET","Optogenetics","Structural MRI"],
+    0,
+    "EEG records electrical activity through electrodes on the scalp."
+  ],
+  [
+    "Brain research tools",
+    "Which method uses blood-oxygen-related changes as an indirect index of brain activity?",
+    ["EEG","fMRI","Neuropixels","Biofeedback"],
+    1,
+    "fMRI typically measures blood-oxygen-level-dependent changes rather than individual neuronal firing directly."
+  ],
+  [
+    "Brain research tools",
+    "A researcher uses a radioactive tracer to investigate brain metabolism. Which method fits?",
+    ["EEG","TMS","PET","Biofeedback"],
+    2,
+    "PET uses radioactive tracers to examine metabolic or other molecular processes."
+  ],
+  [
+    "Brain research tools",
+    "Brief magnetic pulses influence activity in a targeted brain region. Which method fits?",
+    ["PET","EEG","Neuropixels","TMS"],
+    3,
+    "Transcranial magnetic stimulation changes neural activity using magnetic pulses."
+  ],
+  [
+    "Brain research tools",
+    "Genetically introduced light-sensitive proteins allow researchers to control selected neurons. This is:",
+    ["Optogenetics","EEG","PET","Biofeedback"],
+    0,
+    "The combination of genetic targeting and light-based control identifies optogenetics."
+  ],
+  [
+    "Brain research tools",
+    "An implanted high-density probe records many neurons simultaneously. Which tool best fits?",
+    ["fMRI","Neuropixels","Scalp EEG only","A hormone assay"],
+    1,
+    "Neuropixels probes record electrical activity from large numbers of neurons."
+  ],
+  [
+    "Brainstem and cerebellum",
+    "Which structure is strongly associated with breathing and cardiovascular regulation?",
+    ["Hippocampus","Occipital cortex","Medulla","Corpus callosum"],
+    2,
+    "The medulla supports vital autonomic functions, including breathing and cardiovascular regulation."
+  ],
+  [
+    "Brainstem and cerebellum",
+    "Which structure is often described as a bridge and is associated in the bank with coordinating movement?",
+    ["Amygdala","Pituitary","Hippocampus","Pons"],
+    3,
+    "The pons helps relay information among regions and contributes to movement and sleep-related processes."
+  ],
+  [
+    "Brainstem and cerebellum",
+    "Difficulty coordinating movements and maintaining balance most strongly points to:",
+    ["Cerebellum","Pituitary","Thalamus","Corpus callosum"],
+    0,
+    "The cerebellum is central to coordination, balance, timing, and motor learning."
+  ],
+  [
+    "Brainstem and cerebellum",
+    "Arousal, alertness, and sleep–wake regulation are important functions of the:",
+    ["Visual cortex","Reticular formation","Corpus callosum","Pituitary alone"],
+    1,
+    "Reticular networks contribute to arousal and processing of incoming information."
+  ],
+  [
+    "Inner brain",
+    "Which structure is a major relay for sensory information heading toward cortex?",
+    ["Hippocampus","Cerebellum","Thalamus","Pituitary"],
+    2,
+    "The thalamus relays much sensory information and participates in other communication with cortex."
+  ],
+  [
+    "Inner brain",
+    "Hunger, thirst, temperature regulation, and homeostasis most strongly suggest the:",
+    ["Occipital lobe","Corpus callosum","Pons","Hypothalamus"],
+    3,
+    "The hypothalamus coordinates many functions related to internal physiological balance."
+  ],
+  [
+    "Inner brain",
+    "A person has difficulty forming new memories of experiences after surgery. Which structure is most relevant?",
+    ["Hippocampus","Medulla","Primary motor cortex","Pons"],
+    0,
+    "The hippocampus is important for forming new declarative memories, including memories of experiences."
+  ],
+  [
+    "Inner brain",
+    "Emotional significance and threat-related learning are strongly associated with the:",
+    ["Pituitary","Amygdala","Primary visual cortex","Corpus callosum"],
+    1,
+    "The amygdala contributes to emotional learning and processing of significant events."
+  ],
+  [
+    "Cortex and language",
+    "The primary motor cortex is located in which lobe?",
+    ["Temporal","Occipital","Frontal","Parietal"],
+    2,
+    "The primary motor cortex is in the frontal lobe."
+  ],
+  [
+    "Cortex and language",
+    "The primary somatosensory cortex is located in which lobe?",
+    ["Frontal","Occipital","Temporal","Parietal"],
+    3,
+    "The parietal lobe includes the primary somatosensory cortex."
+  ],
+  [
+    "Cortex and language",
+    "Auditory processing is strongly associated with which lobe?",
+    ["Temporal","Occipital","Frontal only","Parietal only"],
+    0,
+    "The temporal lobe contains primary auditory cortex."
+  ],
+  [
+    "Cortex and language",
+    "The primary visual cortex is located in which lobe?",
+    ["Frontal","Occipital","Temporal","Parietal"],
+    1,
+    "The occipital lobe is strongly associated with visual processing."
+  ],
+  [
+    "Cortex and language",
+    "Planning, setting goals, and inhibiting inappropriate responses are examples of:",
+    ["Synaptic reuptake","Spinal reflexes","Executive functions","Hormone secretion"],
+    2,
+    "Executive functions depend on interacting networks, including frontal association regions."
+  ],
+  [
+    "Cortex and language",
+    "Speech is effortful and nonfluent, while comprehension is relatively better preserved. Which pattern best fits?",
+    ["Wernicke's aphasia","A purely visual deficit","A cerebellar balance problem","Broca's aphasia"],
+    3,
+    "Broca's aphasia is classically associated with effortful, nonfluent speech."
+  ],
+  [
+    "Cortex and language",
+    "A person speaks fluently but has major difficulty understanding language. Which pattern best fits?",
+    ["Wernicke's aphasia","Broca's aphasia","A spinal reflex","A purely motor deficit"],
+    0,
+    "Wernicke's aphasia classically involves impaired comprehension, often with fluent but unclear speech."
+  ],
+  [
+    "Brain change",
+    "Learning changes the strength and organization of existing neural connections. This illustrates:",
+    ["Reuptake only","Neuroplasticity","Hormone circulation only","A fixed brain"],
+    1,
+    "Neuroplasticity includes changes in existing connections and organization; new neurons are not required."
+  ],
+  [
+    "Brain change",
+    "The formation of new neurons is called:",
+    ["Lateralization","Reuptake","Neurogenesis","Myelination"],
+    2,
+    "Neurogenesis means the birth of new neurons, distinct from changes in existing connections."
+  ],
+  [
+    "Hemispheres and biofeedback",
+    "Which structure is a major fiber connection between the cerebral hemispheres?",
+    ["Medulla","Pituitary","Cerebellum","Corpus callosum"],
+    3,
+    "The corpus callosum enables extensive communication between the hemispheres."
+  ],
+  [
+    "Hemispheres and biofeedback",
+    "Predominantly opposite-side control of body movement is described as:",
+    ["Contralateral","Hormonal","Ipsilateral in every pathway","Synaptic reuptake"],
+    0,
+    "Contralateral means opposite-side. Many major motor pathways have this organization."
+  ],
+  [
+    "Hemispheres and biofeedback",
+    "Which statement about lateralization is most accurate?",
+    [
+      "Only one hemisphere operates at a time.",
+      "Some functions show hemispheric tendencies, but both hemispheres cooperate.",
+      "Every individual has identical lateralization.",
+      "Creativity belongs entirely to the right hemisphere."
+    ],
+    1,
+    "Lateralization refers to relative specialization, not complete independence or left-brained/right-brained personality types."
+  ],
+  [
+    "Hemispheres and biofeedback",
+    "A person watches a display of muscle tension and practices reducing it. This illustrates:",
+    ["PET","Split-brain surgery","Biofeedback","Optogenetics"],
+    2,
+    "Biofeedback uses information about physiological activity to support learned regulation."
+  ],
+  [
+    "Genetics and hormones",
+    "Which statement best reflects the bank's caution about anabolic steroid misuse?",
+    [
+      "It is harmless because hormones occur naturally.",
+      "It affects muscles but cannot affect behavior.",
+      "All steroid hormones have exactly the same effects.",
+      "Misuse can carry health and behavioral risks."
+    ],
+    3,
+    "The bank emphasizes risks of anabolic-androgenic steroid misuse. Effects depend on the substance and context."
+  ]
+];
+
+const cards = [
+  ["Typical neuron message route",
+   "Dendrites → cell body → axon → terminal buttons."],
+
+  ["Dendrites vs. axon",
+   "Dendrites typically receive input; the axon carries action potentials toward terminals."],
+
+  ["Glia vs. myelin",
+   "Glia support and maintain neurons. Some glia produce myelin, the insulation around many axons."],
+
+  ["Resting potential",
+   "The inside is negative relative to the outside, often approximately −70 mV."],
+
+  ["All-or-none",
+   "Reaching threshold triggers an action potential; a stronger stimulus does not make one action potential larger."],
+
+  ["Electrical vs. chemical communication",
+   "The action potential travels electrically along the axon; neurotransmitters signal chemically across a typical chemical synapse."],
+
+  ["Excitatory vs. inhibitory",
+   "Excitatory input increases firing likelihood; inhibitory input decreases it."],
+
+  ["Reuptake",
+   "Transporters take released neurotransmitter back into the releasing neuron."],
+
+  ["Dopamine and acetylcholine",
+   "Dopamine: movement, attention, learning. Acetylcholine: muscle activation and learning/memory functions."],
+
+  ["GABA, glutamate, serotonin, endorphins",
+   "GABA: inhibition. Glutamate: excitation. Serotonin: mood, sleep, appetite. Endorphins: pain modulation."],
+
+  ["CNS vs. PNS",
+   "CNS = brain and spinal cord. PNS = nerves connecting the CNS with the rest of the body."],
+
+  ["Afferent vs. efferent",
+   "Afferent arrives at the CNS; efferent exits toward effectors."],
+
+  ["Somatic vs. autonomic",
+   "Somatic: sensory communication and skeletal-muscle movement. Autonomic: internal organ regulation."],
+
+  ["Sympathetic vs. parasympathetic",
+   "Sympathetic mobilizes; parasympathetic supports restoration and maintenance."],
+
+  ["Hormones and pituitary",
+   "Hormones travel through blood. The hypothalamus regulates the nearby pituitary, which releases growth hormone and regulates several glands."],
+
+  ["EEG, fMRI, and PET",
+   "EEG: electrical recording. fMRI: blood-oxygen-related activity mapping. PET: radioactive tracer."],
+
+  ["TMS, optogenetics, and Neuropixels",
+   "TMS: magnetic stimulation. Optogenetics: genetic targeting and light. Neuropixels: high-density implanted recording probes."],
+
+  ["Medulla, pons, cerebellum, reticular formation",
+   "Medulla: vital functions. Pons: communication bridge. Cerebellum: coordination. Reticular formation: arousal."],
+
+  ["Thalamus vs. hypothalamus",
+   "Thalamus: relay station. Hypothalamus: homeostasis and endocrine regulation."],
+
+  ["Hippocampus vs. amygdala",
+   "Hippocampus: new declarative memories. Amygdala: emotional significance and emotional learning."],
+
+  ["Four lobes",
+   "Frontal: motor/executive. Parietal: body sensation. Temporal: hearing. Occipital: vision."],
+
+  ["Broca's vs. Wernicke's aphasia",
+   "Broca's: effortful, nonfluent speech. Wernicke's: impaired comprehension, often with fluent speech."],
+
+  ["Neuroplasticity vs. neurogenesis",
+   "Neuroplasticity = change in connections, function, or organization. Neurogenesis = new neurons."],
+
+  ["Corpus callosum and biofeedback",
+   "Corpus callosum connects hemispheres. Biofeedback provides physiological information for learning regulation."]
+];
+
+const get = id => document.getElementById(id);
+
+function makeElement(tag, text, className) {
+  const element = document.createElement(tag);
+  if (text !== undefined) element.textContent = text;
+  if (className) element.className = className;
+  return element;
+}
+
+function shuffle(items) {
+  const result = [...items];
+
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+
+  return result;
+}
+
+get("questionCount").textContent = questions.length;
+
+cards.forEach(([question, answer]) => {
+  const detail = makeElement("details");
+
+  detail.append(
+    makeElement("summary", question),
+    makeElement("p", answer)
+  );
+
+  get("cardContainer").append(detail);
+});
+
+const topics = [...new Set(questions.map(question => question[0]))];
+
+topics.forEach(topic => {
+  const option = makeElement("option", topic);
+  option.value = topic;
+  get("topic").append(option);
+});
+
+let activeQuestions = [];
+let missedQuestions = [];
+let graded = false;
+
+function updateProgress() {
+  const answered =
+    get("quizForm").querySelectorAll("input:checked").length;
+
+  get("progress").textContent =
+    `${answered} of ${activeQuestions.length} answered.` +
+    (graded ? " Attempt graded." : "");
+}
+
+function startAttempt(pool) {
+  activeQuestions = shuffle(pool).map(question => ({
+    source: question,
+    order: shuffle([0, 1, 2, 3])
+  }));
+
+  missedQuestions = [];
+  graded = false;
+
+  get("questionContainer").replaceChildren();
+  get("results").replaceChildren();
+  get("results").hidden = true;
+  get("retryButton").hidden = true;
+  get("gradeButton").disabled = false;
+
+  activeQuestions.forEach((entry, index) => {
+    const [topic, prompt, options] = entry.source;
+    const fieldset = makeElement("fieldset");
+
+    fieldset.append(
+      makeElement("legend", `${index + 1}. ${prompt}`),
+      makeElement("p", topic, "small")
+    );
+
+    entry.order.forEach((originalIndex, displayedIndex) => {
+      const label = makeElement("label", undefined, "option");
+      const input = document.createElement("input");
+
+      input.type = "radio";
+      input.name = `question-${index}`;
+      input.id = `question-${index}-option-${displayedIndex}`;
+      input.value = String(originalIndex);
+      input.addEventListener("change", updateProgress);
+
+      label.append(
+        input,
+        makeElement("span", options[originalIndex])
+      );
+
+      fieldset.append(label);
+    });
+
+    get("questionContainer").append(fieldset);
+  });
+
+  updateProgress();
+}
+
+get("startButton").addEventListener("click", () => {
+  const topic = get("topic").value;
+
+  const pool = topic === "all"
+    ? questions
+    : questions.filter(question => question[0] === topic);
+
+  startAttempt(pool);
+});
+
+get("quizForm").addEventListener("submit", event => {
+  event.preventDefault();
+  if (graded) return;
+
+  const unanswered = activeQuestions.findIndex((entry, index) =>
+    !get("quizForm").querySelector(
+      `input[name="question-${index}"]:checked`
+    )
+  );
+
+  if (unanswered !== -1) {
+    const answered =
+      get("quizForm").querySelectorAll("input:checked").length;
+
+    get("progress").textContent =
+      `Please answer question ${unanswered + 1} before grading. ` +
+      `${answered} of ${activeQuestions.length} answered.`;
+
+    get("quizForm").querySelector(
+      `input[name="question-${unanswered}"]`
+    ).focus();
+
+    return;
+  }
+
+  graded = true;
+  let correct = 0;
+  const topicResults = new Map();
+
+  activeQuestions.forEach((entry, index) => {
+    const [topic, prompt, options, answer, explanation] = entry.source;
+    const fieldset = get("questionContainer").children[index];
+
+    const selected = Number(
+      fieldset.querySelector("input:checked").value
+    );
+
+    const isCorrect = selected === answer;
+
+    if (isCorrect) correct++;
+    else missedQuestions.push(entry.source);
+
+    if (!topicResults.has(topic)) {
+      topicResults.set(topic, {correct: 0, total: 0});
+    }
+
+    const topicScore = topicResults.get(topic);
+    topicScore.total++;
+
+    if (isCorrect) topicScore.correct++;
+
+    fieldset.querySelectorAll("input").forEach(input => {
+      input.disabled = true;
+
+      if (Number(input.value) === answer) {
+        input.parentElement.classList.add("correct-choice");
+      } else if (input.checked) {
+        input.parentElement.classList.add("incorrect-choice");
+      }
+    });
+
+    fieldset.append(
+      makeElement(
+        "div",
+        `${isCorrect ? "Correct." : "Review this concept."} ` +
+        `Answer: ${options[answer]}. ${explanation}`,
+        isCorrect ? "feedback" : "feedback incorrect"
+      )
+    );
+  });
+
+  const percentage = Math.round(
+    correct / activeQuestions.length * 100
+  );
+
+  const results = get("results");
+
+  results.append(
+    makeElement(
+      "h3",
+      `${correct} / ${activeQuestions.length} correct • ${percentage}%`
+    ),
+    makeElement(
+      "p",
+      missedQuestions.length
+        ? "Review the explanations and matching guide sections. Explain each correction aloud before retrying."
+        : "Strong work on this attempt. Explain the concepts without notes and revisit them tomorrow."
+    )
+  );
+
+  topicResults.forEach((score, topic) => {
+    const row = makeElement("div", undefined, "topic-score");
+
+    row.append(
+      makeElement("span", topic),
+      makeElement(
+        "strong",
+        `${score.correct}/${score.total} ` +
+        `(${Math.round(score.correct / score.total * 100)}%)`
+      )
+    );
+
+    results.append(row);
+  });
+
+  results.hidden = false;
+  get("gradeButton").disabled = true;
+  get("retryButton").hidden = missedQuestions.length === 0;
+
+  updateProgress();
+  results.focus();
+});
+
+get("retryButton").addEventListener("click", () => {
+  const retryPool = [...missedQuestions];
+
+  startAttempt(retryPool);
+  get("progress").scrollIntoView({block: "center"});
+});
+
+get("printButton").addEventListener("click", () => {
+  window.print();
+});
+
+startAttempt(questions);
+</script>
+</body>
+</html>
